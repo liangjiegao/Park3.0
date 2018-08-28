@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="indoor_has_car">#ea6868</color>
+    <color name="indoor_no_car">#e2d32f</color>
+
+    <color name="home_navigation_bar4">#43add1</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000</color>
+    <color name="black1">#4b4b4b</color>
+
+    <color name="gray0">#d1d1d1</color>
+    <color name="gray">#b4b4b4</color>
+    <color name="gray1">#efefef</color>
+    <color name="gray2">#6e6e6e</color>
+    <color name="gray3">#e1e1e1</color>
+    <color name="oringe">#ed5c34</color>
+
+    <color name="transparent">#00000000</color>
+</resources>

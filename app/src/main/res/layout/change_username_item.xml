@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        >
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="15521168615"
+            android:textColor="@color/black"
+            android:paddingStart="20dp"
+            android:background="@null"
+            />
+        <ImageButton
+            android:id="@+id/ib_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@mipmap/delete"
+            android:background="@null"
+            android:scaleType="fitXY"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

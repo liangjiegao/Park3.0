@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myattrs="http://schemas.android.com/apk/com.example.superl.park30"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <com.example.superl.park30.UI.view.MyRoundImageView
+            android:id="@+id/myiv_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/logo"
+            myattrs:type="round"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="易泊"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v3.0.0"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/white"
+            >
+            <ListView
+                android:id="@+id/lv_author_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:divider="@color/gray1"
+                android:footerDividersEnabled="true"
+                android:dividerHeight="1px"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="广东二师视听觉实验室"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        />
+</RelativeLayout>
+

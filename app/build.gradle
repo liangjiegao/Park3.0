@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.superl.park30"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            maven{
+                url "https://raw.github.com/bmob/bmob-android-sdk/master"
+            }
+            maven{url "https://jitpack.io"}
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //地图api库
+    implementation files('libs/AMap3DMap_6.3.0_AMapNavi_6.1.0_AMapSearch_6.1.0_AMapLocation_4.1.0_20180619.jar')
+    implementation files('libs/xutilslibrary.jar')
+    implementation project(':imageselector')
+    implementation files('libs/httpcore-4.3.2.jar')
+    implementation files('libs/httpclient-win-4.5.5.jar')
+    implementation files('libs/httpclient-cache-4.5.5.jar')
+    implementation files('libs/httpclient-4.5.5.jar')
+}
+

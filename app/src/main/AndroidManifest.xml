@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.superl.park30">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>\
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+        android:name=".global.ParkApplication"
+        >
+        <activity android:name=".UI.activity.MainActivity"
+            android:enabled="true"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.tencent_android.qqdownloader"/>
+                <category android:name="shoucangtouzidaokan"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".UI.activity.UserMsgPage"/>
+        <activity android:name=".UI.activity.OrderedPage"/>
+        <activity android:name=".UI.activity.OrderingPage"/>
+        <activity android:name=".UI.activity.SettingPage"/>
+        <activity android:name=".UI.activity.UserHelper"/>
+        <activity android:name=".UI.activity.IndoorParkActivity"/>
+        <activity android:name=".UI.activity.ChangeUserNameActivity"/>
+        <activity android:name=".UI.activity.PhoneChangeActivity"/>
+        <activity android:name=".UI.activity.AddressSettingActivity"/>
+        <activity android:name=".UI.activity.AddressSelectActivity"/>
+        <activity android:name=".UI.activity.AboutAuthorActivity"/>
+        <activity android:name=".UI.activity.UserAgreementActivity"/>
+
+        <activity
+            android:name="com.donkingliang.imageselector.ImageSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.donkingliang.imageselector.PreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.donkingliang.imageselector.ClipImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!-- Android 7.0 文件共享配置，必须配置 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <activity android:name="com.amap.api.navi.AmapRouteActivity"
+            android:theme="@android:style/Theme.DeviceDefault"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <!--启用高德地图服务-->
+        <meta-data android:name="com.amap.api.v2.apikey"
+            android:value="d2c762de60bdcf82e16589137e2c74c5"/>
+
+
+    </application>
+
+</manifest>
